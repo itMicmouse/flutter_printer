@@ -48,7 +48,12 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: GestureDetector(
+            onTap: (){
+              FlutterPrinter.startChrome("http://127.0.0.1:8003/views/print.html","ZHL10000009615815791167","eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODE1NzkwODEsImtleSI6InVzZXI6bG9naW46MTIyNzg1Njk4MjA2MTM1MDk5NjpaSEwxMDAwMDAwOTY6ZGV2aWNlU246MToxNTgxNTc5MDgxNjc0In0.lHgbCon1y-ihnT14ePM2pjTrJZzBcyIDu21wqH33JRs");
+            },
+            child: Text('Running on: $_platformVersion\n'),
+          ),
         ),
       ),
     );
